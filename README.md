@@ -4,7 +4,7 @@ The 2-RDMs from response theory are not N-representable. That is, the response 2
 
 [Lanssens et al.][1] presents a new method making these non-N-representable 2-RDMs approximately N-representable in *Method For Making 2-Electron Response Reduced Density Matrices Approximately N-representable*.
 
-This program is the implementation of the method in this paper and obtains good performance.
+This program is the implementation of the method in this paper and obtains good performance (see below), and serves as a subprogram for Variational Quantum Eigensolver (VQE).
 
 ## Procedure
 
@@ -62,6 +62,12 @@ nrep.optimize()
 Calculate energe from 2-RDM and 1-RDM, according to Equation A14 in the Google's famous [Hartree Fork paper](4).
 
 The method of obtaining $ h_{ij} $ and $ V_{ijkl} $ refers to [stackexchange](https://mattermodeling.stackexchange.com/questions/4284/how-are-1-electron-and-2-electron-integrals-done-in-pyscf).
+
+```python
+ideal_energy = get_energy(nrep.two_particle_rdm_ideal, atom, basis, num_particles)
+noisy_energy = get_energy(nrep.two_particle_rdm_noisy, atom, basis, num_particles)
+optimized_energy = get_energy(nrep.two_particle_rdm_optimized, atom, basis, num_particles)
+```
 
 ### 3. Result
 
