@@ -12,7 +12,7 @@ See FIG.1 of the [paper][1].
 
 <img src="./figures/procedure.png" width="50%">
 
-This is implemented in [NRepresentabiliy.optimize](./NRepresentability.py).
+This is implemented in [NRepresentabiliy.optimize](./NRepresentability.py#L128).
 
 ### Fix 2-RDM
 
@@ -20,7 +20,7 @@ See from Equation.40 to Equation.43 of the [paper][1].
 
 <img src="./figures/fix_2rdm.png" width="50%">
 
-This is implemented in [NRepresentabiliy.fix_two_rdm](./NRepresentability.py).
+This is implemented in [NRepresentabiliy.fix_two_rdm](./NRepresentability.py#L67).
 
 ## Requirements
 
@@ -44,8 +44,6 @@ Let's assume they are stored in `ideal_rdm, noisy_rdm`.
 
 ### 1. Use `NRepresentability` to get approximately N-representable 2-RDM
 
-See [./error_mitigation.py](./error_mitigation.py):
-
 ```python
 nrep = NRepresentability(
         num_spin_orbital=num_spin_orbitals,
@@ -64,8 +62,6 @@ nrep.optimize()
 Calculate energe from 2-RDM and 1-RDM, according to Equation A14 in the Google's famous [Hartree Fork paper](4).
 
 The method of obtaining $ h_{ij} $ and $ V_{ijkl} $ refers to [stackexchange](https://mattermodeling.stackexchange.com/questions/4284/how-are-1-electron-and-2-electron-integrals-done-in-pyscf).
-
-The whole procedure refers to [`get_energy`](./error_mitigation.py) function.
 
 ### 3. Result
 
@@ -93,11 +89,11 @@ As you see, the trace error optimized from 13.862 to 12, while energy optimized 
 
 Since (1) and (2) might release some of our research idea, so we do not release them at now.
 
-## References
+<!-- ## References -->
 
-- [1]: https://arxiv.org/pdf/1707.01022 "Method For Making 2-Electron Response Reduced Density Matrices Approximately N-representable"
-- [2]: https://github.com/quantumlib/OpenFermion/blob/master/src/openfermion/utils/rdm_mapping_functions.py "Mapping between different kinds of RDMs"
-- [3]: https://github.com/quantumlib/OpenFermion "GitHub repository of OpenFermion"
-- [4]: https://arxiv.org/pdf/2004.04174 "Hartree-Fock on a superconducting qubit quantum computer"
-- [5]: https://github.com/pyscf/pyscf "PySCF GitHub Repository"
+[1]: https://arxiv.org/pdf/1707.01022 "Method For Making 2-Electron Response Reduced Density Matrices Approximately N-representable"
+[2]: https://github.com/quantumlib/OpenFermion/blob/master/src/openfermion/utils/rdm_mapping_functions.py "Mapping between different kinds of RDMs"
+[3]: https://github.com/quantumlib/OpenFermion "GitHub repository of OpenFermion"
+[4]: https://arxiv.org/pdf/2004.04174 "Hartree-Fock on a superconducting qubit quantum computer"
+[5]: https://github.com/pyscf/pyscf "PySCF GitHub Repository"
         
