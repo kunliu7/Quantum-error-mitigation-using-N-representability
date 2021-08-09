@@ -32,9 +32,7 @@ P.S. `rdm_mapping_functions.py` is copied from [OpenFermion][2] without any modi
 
 ## Usage
 
-Copy `NRepresentability.py` (and `rdm_mapping_functions.py` if you do not install OpenFermion) to your program.
-
-Refer to [error_mitigation.py](./error_mitigation.py) for the usage. Here are some explanations.
+For using N-representability in your own program, copy `NRepresentability.py` (and `rdm_mapping_functions.py` if you do not install OpenFermion) to your program, and refer to [error_mitigation.py](./error_mitigation.py) for the usage. Here are some explanations.
 
 ### 0. Generate ideal and noisy 2-RDM from your ansatz
 
