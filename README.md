@@ -88,10 +88,9 @@ As you see, the trace error optimized from 13.862 to 12, while energy optimized 
 ## To Do
 
 1. release the code of generating 2-RDM
-2. release the code of calculating energy from 2-RDM
-3. embedding this program into some existing quantum error mitigation module
+2. embedding this program into some existing quantum error mitigation module
 
-Since (1) and (2) might release some of our research idea, so we do not release them at now.
+Since (1) might release some of our research idea, so we do not release them at now.
 
 <!-- ## References -->
 
