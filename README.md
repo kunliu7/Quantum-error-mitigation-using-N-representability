@@ -57,7 +57,7 @@ nrep.optimize()
 
 ### 2. Calculate energy using 2-RDM
         
-Calculate energe from 2-RDM and 1-RDM, according to Equation A14 in the Google's famous [Hartree Fork paper](4).
+Calculate energe from 2-RDM and 1-RDM, according to Equation A14 in the Google's famous [Hartree Fork paper][4].
 
 The method of obtaining $ h_{ij} $ and $ V_{ijkl} $ refers to [stackexchange](https://mattermodeling.stackexchange.com/questions/4284/how-are-1-electron-and-2-electron-integrals-done-in-pyscf).
 
